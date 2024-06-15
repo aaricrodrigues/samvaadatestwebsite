@@ -1,0 +1,68 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contactus.css" />
+    <style>
+      body{
+        background-image: url('imgs/grade123.jpg');
+        cursor: url('imgs/cursorcustom.png'), auto;
+      }
+      *:hover {
+        cursor: url('imgs/customhovercursor.png'), pointer;
+      }
+      a, button {
+          cursor: pointer;
+      }
+    </style>
+    <title>Samvaada | NMAMIT</title>
+  </head>
+  <body>
+    <header>
+      <div id="brand"><a href="index.html"><img src="imgs/textwhite2.png"></a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+        <img src="imgs/samvadawhitelogoonly.png" alt="Menu" />
+        <ul class="mobile-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="team.html">The Team</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="wrapper">
+        <section class="left">
+            <div class="image-container">
+                <img src="imgs/Athul.png" class="feature-img anim">
+            </div>
+        </section>
+        <section class="right">
+            <div class="content">
+                <h1>Conducting an Event?</h1>
+                <h5 class="anim">Get in touch with us!</h5>
+                <p class="anim">We'll be able to cover all your digital and social media needs.Click the button below to reach us.</p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=samvaada@nmamit.in&su=Enquiry%20for%20Event%20Coverage&body=Hi%20there,%0D%0A%0D%0AI%20would%20like%20to%20enquire%20about%20event%20coverage.%0D%0A%0D%0AThanks!" class="btngmailpc anim" target="_blank">G-Mail Us</a>
+            </div>
+        </section>
+    </div>
+    <div class="showmob">
+        <div class="content">
+            <h1>Conducting an Event?</h1>
+            <h5 class="anim">Get in touch with us!</h5>
+            <p class="anim">We'll be able to cover all your digital and social media needs. Click the below buttons to reach us</p>
+                <a href="googlegmail://co?to=samvaada@nmamit.in&subject=Enquiry%20for%20Event%20Coverage&body=Hi%20there,%0D%0A%0D%0AI%20would%20like%20to%20enquire%20about%20event%20coverage.%0D%0A%0D%0AThanks!" class="btngmail anim">G-Mail</a>
+                <a href="https://wa.me/+971566088290?text=Hi,%20I%20wanted%20to%20enquire%20about%20coverage%20for%20an%20event" class="btnwhatsapp anim" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+    <script src="js/contactus.js"></script>
+  </body>
+</html>
