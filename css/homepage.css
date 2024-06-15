@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: #09c372;
+}
+
+#brand img{
+    width: justify;
+    height: 100%;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(45deg, #df4881, #c430d7);
+  transition: 0.3s;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.open .mobile-menu {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 0;
+  height:auto;
+  overflow:hidden;
+  border-radius: 25px;
+  transform-origin: top right;
+  animation: open 0.4s backwards;
+}
+@keyframes open{
+  0%{
+    transform: scale(0);
+    opacity:0;
+  }
+  100%{
+    transform: scale(1);
+    opacity:1;
+  }
+}
+
+
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+.mobile-menu {
+    transition: all 0.4s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .open .mobile-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+/* Flex Box CSS*/
+.wrapper{
+    display:flex;
+    margin-top: 50px;
+}
+.left {
+    flex:70%;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+.right{
+    flex:30%;
+    margin:20px;
+}
+.left,.right{
+    box-sizing: border-box;
+}
+
+
+@media only screen and (max-width: 640px){
+    .wrapper{
+        display:block;
+    }
+    .left{
+        padding-top: 60px;
+        width:90%;
+        margin:15px;
+    }
+    .right{
+        display: none;
+    }
+    .content h1 {
+        font-size: 20px; 
+        font-weight: bold; 
+        margin-bottom: 10px; 
+      }
+}
+
+
+
+/*Text and image CSS*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+.content {
+    margin-top: 15%;
+    max-width: 600px;
+    color: white;
+  }
+  
+  .content h1 {
+    font-size: 60px;
+  }
+  
+  .content h5 {
+    font-size: 30px;
+  }
+  
+  .content p {
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    border-top-right-radius: 30px;
+  }
+  .anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+  }
+  
+  @keyframes moveup {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .feature-img {
+    width: 450px;
+    height: 650px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+  }
+
+  /*Change size of samvaada text and other stuff with respect to mobile size*/
+
+
+  @media screen and (max-width: 500px) {
+    .content h1 {
+        font-size: 40px;
+    }
+    .feature-img {
+      max-width: 200px;
+      max-height: 300px;
+    }
+  }
+  
+  @media screen and (min-width: 501px) and (max-width: 800px) {
+    .content h1 {
+        font-size: 40px;
+    }
+    .feature-img {
+      max-width: 250px;
+      max-height: 350px;
+    }
+  }
+  
+  @media screen and (min-width: 801px) and (max-width: 1000px) {
+    .content h1 {
+        font-size: 60px;
+    }
+
+    .feature-img {
+      max-width: 380px;
+      height: 550px;
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+    }
+  }
+  
+  @media screen and (min-width: 1001px) and (max-width: 1250px) {
+    .content h1 {
+        font-size: 80px;
+    }
+
+    .feature-img {
+      max-width: 410px;
+      max-height: 550px;
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+    }
+  }
+  
+  @media screen and (min-width: 1251px) {
+    .content h1 {
+        font-size: 100px;
+    }
+  }
+
+
+  /*Custom Cursor
+
+body {
+    cursor: url('cursorcustom.png'), auto;
+}
+ Fallback for unsupported browsers 
+*:hover {
+  cursor: url('customhovercursor.png'), pointer;
+}
+ Set pointer cursor for clickable elements 
+a, button {
+    cursor: pointer;
+}
+*/
+
+/*for mobile displays*/
+
+
+@media only screen and (max-width: 600px) {
+  .bigmobile{
+    display: none;
+  }
+  .mobdis{
+    display: block;
+    margin: 10px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .mobdis{
+    display: none;
+  }
+}
+
+
+
+/* Responsive media queries for .samvaadaheader (as per your earlier instructions) */
+@media screen and (max-width: 500px) {
+  .content {
+    margin-top: 15%;
+    max-width: 600px;
+    color: white;
+  }
+  
+  .content h1 {
+    font-size: 60px;
+  }
+  
+  .content h5 {
+    font-size: 30px;
+  }
+  
+  .content p {
+    margin-bottom: 30px;
+    padding:10px ;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+
+}
+
+.samvaadapara{
+  font-size: auto;
+  padding-left:30px;
+  padding-right: 30px;
+  color: white;
+}

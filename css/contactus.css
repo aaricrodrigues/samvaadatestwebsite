@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: #09c372;
+}
+
+#brand img{
+    width: justify;
+    height: 100%;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+}
+
+ul li {
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 15px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(45deg, #df4881, #c430d7);
+  transition: 0.3s;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon img {
+  width: 35px;
+  height: 35px;
+}
+
+.open .mobile-menu {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 0;
+  height:auto;
+  overflow:hidden;
+  border-radius: 25px;
+  transform-origin: top right;
+  animation: open 0.4s backwards;
+}
+
+@keyframes open{
+  0%{
+    transform: scale(0);
+    opacity:0;
+  }
+  100%{
+    transform: scale(1);
+    opacity:1;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+.mobile-menu {
+    transition: all 0.4s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .open .mobile-menu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /*Custom Cursor
+
+body {
+    cursor: url('cursorcustom.png'), auto;
+}
+ Fallback for unsupported browsers 
+*:hover {
+  cursor: url('customhovercursor.png'), pointer;
+}
+ Set pointer cursor for clickable elements 
+a, button {
+    cursor: pointer;
+}
+*/
+
+/*for mobile displays*/
+
+
+/* Flex Box CSS*/
+.wrapper {
+    display: flex;
+    margin-top: 41px;
+}
+
+.left {
+    flex: 1; /* Adjust to take remaining space after right section */
+    margin-left: 50px;
+    position:relative;
+}
+
+.right {
+    flex: 2; /* Adjust to take more space than left section */
+    padding: 50px;
+    margin-left: 100px;
+}
+.left,.right{
+    box-sizing: border-box;
+}
+
+  
+.feature-img {
+    height: 550; /* Make the image responsive */
+    max-width: 500px;
+    position: absolute;
+    bottom: 0;
+    top: 100;
+    right: inherit;
+    margin-left: 90px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .feature-img {
+        margin-left: 10px; /* Reduce the margin to 40px on smaller screens */
+    }
+}
+.showmob{
+    display: none;
+}
+/*disaable the flexbox for the mobile devices*/
+@media only screen and (max-width: 640px){
+    .wrapper{
+        display:block;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .showmob{
+        display: flex;
+        margin: 10px;
+        margin-top:40px;
+    }
+}
+
+@media only screen  and (min-width: 640px) and (max-width: 850px){
+    .left{
+        display: none;
+    }
+    .right{
+        margin-left:auto;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .content {
+        margin-top: 5%;
+        max-width: 900px;
+        color: white;
+      }
+    .content h1 {
+        font-size: 70px;
+      }
+      
+      .content h5 {
+        font-size: 40px;
+      }
+      
+      .content p {
+        margin-bottom: 30px;
+      }
+    
+}
+@media only screen and (min-width: 1200px) {
+    .header {
+        top: 0;
+        width: 100%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    .content {
+        margin-top: 0;
+        max-width: 900px;
+        color: white;
+      }
+    .right h1 {
+        font-size: 75px !important;
+    }
+    
+    .right h5 {
+        font-size: 40px !important;
+    }
+}
+
+
+
+/*Text and image CSS*/
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.content {
+    margin-top: 15%;
+    max-width: 600px;
+    color: white;
+  }
+  
+  .content h1 {
+    font-size: 60px;
+  }
+  
+  .content h5 {
+    font-size: 30px;
+  }
+  
+  .content p {
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #df4881, #c430d7);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+  }
+  
+  .btn:hover {
+    border-top-right-radius: 30px;
+  }
+
+  .btngmail {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #ea4335, #c5221f);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+    border-top-right-radius: 30px;
+}
+
+.btnwhatsapp {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #25d366, #128c7e);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s; 
+    border-top-right-radius: 30px;
+}
+.btngmailpc {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 40px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #ea4335, #c5221f);
+    font-size: 14px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: 0.5s;
+}
+.btngmailpc:hover {
+    border: 1px solid white;
+    border-top-right-radius: 30px;
+}
+
+  .anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+  }
+  
+  @keyframes moveup {
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .right {
+        display: flex; /* Add this to enable flexbox */
+        justify-content: center; /* Center the text horizontally */
+        align-items: center; /* Center the text vertically */
+        padding: 50px; /* Adjust the padding to create some space around the text */
+        height: 100%; /* Set the height to 100% to allow vertical centering */
+    }
+}
