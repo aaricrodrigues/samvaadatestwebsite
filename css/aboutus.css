@@ -19,6 +19,11 @@ header a {
   text-decoration: none;
 }
 
+@media only screen and (max-width:640px){
+  .samvaadalogotopimage{
+    max-width:45%;
+  }
+}
 header {
   padding: 0 20px;
   background-color: transparent;
